@@ -2,6 +2,7 @@
 
 namespace MyNewPr.BL.Model
 {
+    [Serializable]
     public class User
     {
         /// <summary>
@@ -19,7 +20,7 @@ namespace MyNewPr.BL.Model
         /// <param name="_PortName"> Номер порта для подключения</param>
         /// <exception cref="ArgumentNullException"></exception>
         /// <exception cref="ArgumentNullException"></exception>
-        public User(string _UserName, string _PortName) 
+        public User(string _UserName, string _PortName = "COM1") 
         {
             if(string.IsNullOrWhiteSpace(_UserName))
             {  throw new ArgumentNullException("Имя не может быть пустым или NULL", nameof(_UserName)); }
